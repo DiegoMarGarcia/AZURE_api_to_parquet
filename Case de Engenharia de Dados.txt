@@ -1,0 +1,24 @@
+Case de Engenharia de Dados
+
+Objetivo
+Implementar uma solução de dados (datalake local em PySpark ou em Azure – conta gratuita) que consuma População (2024) e PIB Municipal (2021) do IBGE, realize a ingestão via API, modele os dados e exponha indicadores em tabelas e um dashboard simples o Power BI. Compartilhar a solução em um repositório do GitHub.
+
+Fontes oficiais (IBGE):
+POP (agregado 6579): https://servicodados.ibge.gov.br/api/v3/agregados/6579/
+PIB municipal (agregado 5938): https://servicodados.ibge.gov.br/api/v3/agregados/5938/
+
+Requisitos funcionais:
+Arquitetura: apresente a arquitetura da solução utilizando Azure.
+Modelagem: defina e justifique o modelo.
+Realizar a ingestão, tratar e qualificar os dados.
+Armazenar os dados em formato parquet.
+Entrega de indicadores (em camada delivery e dashboard no Power BI):
+Município-ano (pib, população, pib per capita, YoY, share na UF e no Brasil, rankings);
+UF-ano (agregado por UF, idem métricas);
+Brasil-ano (agregado nacional).
+
+Tópicos que consideramos importantes:
+Qualidade da modelagem.
+Boas práticas de engenharia de dados.
+Documentação objetiva e suficiente para que outros engenheiros entendam e rodem.
+
