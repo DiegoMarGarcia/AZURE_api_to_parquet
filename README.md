@@ -63,9 +63,10 @@ Estrutura de containers no storage:
 
 ---
 
-## 🔄 Transformação (Silver → Gold)  --to do
+## 🔄 Transformação (Silver → Gold)  -- to do
+Durante as transformaçoes da SILVER, detectei que dados podem estar incorretos por serem agregados, assim nao temos como separar os estados em analises profundas.
 
-No Databricks, realizamos:  
+No Databricks :  
 - Normalização de schemas.  
 - Criação de métricas:  
   - PIB per capita.  
@@ -79,9 +80,10 @@ No Databricks, realizamos:
 ---
 
 ## 📈 Dashboard no Power BI  --to do
+Estou em busca de uma soluçao para power BI, como nao atuei na area, há de se verificar melhor alternativa
 
 - Conexão com a camada **Gold** do Data Lake.  
-- Indicadores entregues:  
+- Indicadores :  
   - PIB total, População total, PIB per capita.  
   - Evolução **YoY**.  
   - Rankings de Municípios e UFs.  
