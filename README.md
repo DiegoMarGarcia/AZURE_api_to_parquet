@@ -14,17 +14,19 @@ A arquitetura segue o padrão **Medallion (Bronze → Silver → Gold)**:
 - **Gold (Delivery Layer):** indicadores prontos para consumo no Power BI.  
 - **Power BI:** visualização final dos indicadores.  
 
-📌 *Sugestão de imagem:* diagrama mostrando **Azure Databricks + ADLS + Power BI**.  
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1ff135f0-4c57-4395-bb44-0fe67ad854ef" />
+
 
 ---
 
 ## 🏗️ Serviços no Azure  
 
 ### 🔹 Resource Group  
-- Nome sugerido: `rg-ibge-datalake`  
+- Nome: `teste_case_contratacao`  
 - Centraliza todos os recursos do projeto.  
 
-📌 *Imagem sugerida:* print do **Resource Group** no Azure Portal.  
+<img width="1487" height="313" alt="image" src="https://github.com/user-attachments/assets/e83f3031-f7aa-47a7-b8ac-c8ce4ee2e549" />
+
 
 ---
 
@@ -34,17 +36,18 @@ Estrutura de containers no storage:
 - `silver/` → dados tratados  
 - `gold/` → indicadores finais  
 
-📌 *Imagem sugerida:* tela do **ADLS** mostrando os containers.  
+<img width="541" height="359" alt="image" src="https://github.com/user-attachments/assets/66010524-f356-4338-8a68-4bc0902d907b" />
 
 ---
 
 ### 🔹 Azure Databricks  
 - Workspace provisionado para execução dos jobs em PySpark.  
 - Notebooks criados:  
-  - `src/ingest_ibge.py` → ingestão da API e escrita no **bronze**.  
-  - `src/transform_silver_to_gold.py` → transformação e criação de métricas no **gold**.  
+  - `src/API_ingestion_parquet_ondemand.py` → ingestão da API e escrita no **bronze**.  
+  - `src/BRONZE_to_SILVER___pib_municipal_ondemand.py` → dados tratados na **silver**.  
 
-📌 *Imagem sugerida:* tela do **Databricks** rodando o código PySpark.  
+<img width="1084" height="139" alt="image" src="https://github.com/user-attachments/assets/4df9dbf6-174d-432d-b124-2d9bb513ea4a" />
+
 
 ---
 
@@ -55,11 +58,12 @@ Estrutura de containers no storage:
   - PIB Municipal → **Agregado 5938**  
 - Dados gravados no **ADLS** em `parquet`.  
 
-📌 *Imagem sugerida:* execução do código com `.write.parquet(...)`.  
+<img width="720" height="572" alt="image" src="https://github.com/user-attachments/assets/2e0931be-eef0-4d10-9433-4e06136204de" />
+
 
 ---
 
-## 🔄 Transformação (Silver → Gold)  
+## 🔄 Transformação (Silver → Gold)  --to do
 
 No Databricks, realizamos:  
 - Normalização de schemas.  
@@ -74,7 +78,7 @@ No Databricks, realizamos:
 
 ---
 
-## 📈 Dashboard no Power BI  
+## 📈 Dashboard no Power BI  --to do
 
 - Conexão com a camada **Gold** do Data Lake.  
 - Indicadores entregues:  
@@ -97,5 +101,4 @@ No Databricks, realizamos:
 
 ---
 
-## 📂 Estrutura do Repositório  
 
